@@ -1,0 +1,822 @@
+What is HTML?
+HTML stands for Hyper Text Markup Language
+HTML is the standard markup language for creating Web pages
+HTML describes the structure of a Web page
+HTML consists of a series of elements
+HTML elements tell the browser how to display the content
+HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+</body>
+</html>
+
+The <!DOCTYPE html> declaration defines that this document is an HTML5 document
+The <html> element is the root element of an HTML page
+The <head> element contains meta information about the HTML page
+The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
+The <body> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+The <h1> element defines a large heading
+The <p> element defines a paragraph
+-----------------------------------------------------------------
+General info:
+
+All HTML documents must start with a document type declaration: <!DOCTYPE html>.
+
+The HTML document itself begins with <html> and ends with </html>.
+
+The visible part of the HTML document is between <body> and </body>.
+
+----------------------------------------------------------------------
+METADATA:Describe metadata within an HTML document.
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials"> <!--Define a description of your web page-->
+  <meta name="keywords" content="HTML, CSS, JavaScript"> <!--Define a keywords of your web page-->
+  <meta name="author" content="John Doe"> <!--Define a author of your web page-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Setting the viewport to make your website look good on all devices -->
+  <meta name="robots" content="INDEX, FOLLOW"> <!--TO display our website for crawling-->
+  <meta name="robots" content="NOINDEX, NOFOLLOW"> <!--NOT TO display our website for crawling by web-->
+  <meta http-equiv="refresh" content="30"> <!--to refresh the page in 30 sec etc..-->
+</head>
+
+Definition and Usage:
+The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
+
+<meta> tags always go inside the <head> element, and are typically used to specify character set, page description,
+ keywords, author of the document, and viewport settings.
+
+Metadata will not be displayed on the page, but is machine parsable.
+
+Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.
+
+There is a method to let web designers take control over the viewport (the user's visible area of a web page),
+ through the <meta> tag (See "Setting The Viewport" example below).
+
+
+NOTE :
+Double quotes around attribute values are the most common in HTML, but single quotes can also be used.
+In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes and 
+vice-versa.
+--------------------------------------------------------------------------------------------
+Heading:
+
+HTML headings are defined with the <h1> to <h6> tags.
+<h1> defines the most important heading. <h6> defines the least important heading.
+
+e.g   <!--Size of the heading is biggest to lowest.-->
+<h1>Heading 1</h1>  <!--Size of the heading is biggest.-->
+<h2>Heading 2</h2>  
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>  <!--Size of the heading is lowest.-->
+
+NOTE :Headings Are Important Search engines use the headings to index the structure and content of your web pages.
+
+<h1> headings should be used for main headings, followed by <h2> headings, then the less important <h3>, and so on.
+
+Note: Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+
+NOTE: Each HTML heading has a default size. However, you can specify the size for any heading with the 
+style attribute, using the CSS font-size property.
+
+e.g : <h1 style="font-size:60px;">Heading 1</h1>
+e.g : <h1 style="font-size:medium;">Heading 1</h1>
+----------------------------------------------------------------
+Paragraph:
+How to add paragraph in body:
+<p> this is paragraph</p>     #this is block type element, it acquire the space of each block till next block/inline element.
+
+Note: in paragraph we can use
+1) <strong>Make thing bold</strong> this is same as <b>Bold</b>
+2) <em>to emphaszie</em>
+3) <i>Italic</i>
+4) <br> : a line break (a new line) without starting a new paragraph
+5) <hr> : horizontal rule
+
+e.g
+<p>Lorem ipsum <strong>dolor sit amet</strong> , <em>consectetur</em>  adipisicing <i>elit</i> elit. <b>Iste</b>, etc.</p>
+----------------------------------------------------------------
+How to add links and Images:
+
+1) with anchor tag <a></a> ; we can use following most imp attributes of this tag:
+a) href : Specifies the URL of the page the link goes to
+b) target	_blank
+            _parent
+            _self
+            _top	
+Specifies where to open the linked document
+e.g <a href="https://google.com" target="_blank">Go to google</a><br>  
+    <!--we used href attribut within <a> tag with next tap page target-->
+	
+2) The <img> tag is used to embed an image in an HTML page and this tag has two required attributes:
+src - Specifies the path to the image
+alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed
+
+Syntax will look like :
+a) Adding img: <img src="Source" alt="Alternate image msg" width="1000" height="300">
+b) Image as a link : <a href="https://google.com" target="_blank"> <img src="source" alt="" ></a>
+-----------------------------------------------------------------------------------------
+
+How to add ordered,unordered and description list to the webpage:
+
+Tag	Description
+<ul>	Defines an unordered list
+<ol>	Defines an ordered list
+<li>	Defines a list item
+<dl>	Defines a description list
+<dt>	Defines a term in a description list
+<dd>	Describes the term in a description list
+
+e.g:
+<p>
+        <ul>
+            <li>This is my first unordered list</li>
+            <li>This is my second unordered list</li>
+            <li>This is my third unordered list</li>
+            
+        </ul>
+        <ul type='square'> 
+            <li>This is my first unordered list</li>
+            <li>This is my second unordered list</li>
+            <li>This is my third unordered list</li>  
+        </ul>
+</p>
+<p>
+        <ol>
+            <li>This is my first ordered list</li>
+            <li>This is my second ordered list</li>
+            <li>This is my third ordered list</li>
+            
+        </ol>
+        <ol type='a'> 
+            <li>This is my first ordered list</li>
+            <li>This is my second ordered list</li>
+            <li>This is my third ordered list</li>  
+        </ol>
+</p>
+<p>
+        <dl>
+            <dt>This is item</dt>
+            <dd>-This is item detialed description</dd>
+        </dl>
+</p>
+---------------------------------------------------------
+#Define an HTML Table:
+
+1)The <table> tag defines an HTML table.
+2)Each table row is defined with a <tr> tag. 
+3)Each table data/cell is defined with a <td> tag.By default, the text in <td> elements are regular and left-aligned.
+4)Each table header is defined with a <th> tag.By default, the text in <th> elements are bold and centered.
+
+E.g
+    <table>
+        <!-- <caption>Employee Info</caption> -->
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>ID</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sandy</td>
+                <td>001</td>
+                <td>DA</td>
+            </tr>
+            <tr>
+                <td>Rajan</td>
+                <td>002</td>
+                <td>DA</td>
+            </tr>
+            <tr>
+                <td>Riya</td>
+                <td>003</td>
+                <td>DA</td>
+            </tr>
+        </tbody>
+    </table>
+	
+---------------------------------------------------------------------
+<!--This How we can add form in our page-->
+
+    <form action="backhend.php" target="_blank" method="POST">
+        <label for="name">NAME</label>
+        <div>
+            <input type="text" name="MYNAME" id="name">
+        </div>
+        <br>
+        <div>
+            Email: <input type="email" name="MYEmail">
+        </div>
+        <br>
+        <div>
+            FormDate: <input type="date" name="MYDATE">
+        </div>
+        <br>
+        <div>
+            Marks: <input type="number" name="Marks">
+        </div>
+        <br>
+        <div>
+            Eligible?: <input type="checkbox" name="Eligibility">
+        </div>
+        <br>
+        <div>
+            Gender: Male<input type="Radio" name="Gender">
+            Female<input type="Radio" name="Gender">
+            Other<input type="Radio" name="Gender">
+        </div>
+        <br>
+        <div>
+            Feedback: <br></Feedback:br> <textarea name="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <label for="JD">JOB choice</label>
+        <div>
+            <select name="JOB Profile" id="JD">
+                <option value="Data Engg">Data Engg</option>
+                <option value="Business Analyst" selected>Business Analyst</option> 
+                <option value="Data scientist">Data scientist</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+        </div>
+        <br>
+        <div>
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+	
+NOTE:
+The action attribute defines the action to be performed when the form is submitted.
+Usually, the form data is sent to a file on the server when the user clicks on the submit button.
+In the example below, the form data is sent to a file called "backhend.php".
+ This file contains a server-side script that handles the form data:
+The target attribute specifies where to display the response that is received after submitting the form.
+The method attribute specifies the HTTP method to be used when submitting the form data.
+
+The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+The default HTTP method when submitting form data is GET. 
+Tip: Always use POST if the form data contains sensitive or personal information!
+
+The autocomplete attribute specifies whether a form should have autocomplete on or off.
+When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+
+The <label> Element
+The <label> element defines a label for several form elements.
+
+The <label> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+
+The <label> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <label> element, it toggles the radio button/checkbox.
+
+The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+
+The <select> element defines a drop-down list:
+
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+
+The <option> elements defines an option that can be selected.
+
+By default, the first item in the drop-down list is selected.
+
+To define a pre-selected option, add the selected attribute to the option
+-----------------------------------------------------------------------------------------
+
+#HTML class Attribute?
+
+>The HTML class attribute is used to specify a class for an HTML element.Multiple HTML elements can share the same class.
+>The class attribute is often used to point to a class name in a style sheet.
+ It can also be used by a JavaScript to access and manipulate elements with the specific class name.
+>To create a class; write a period (.) character, followed by a class name.
+>The class name is case sensitive
+>Different HTML elements can point to the same class name
+>HTML elements can belong to more than one class.
+
+To define multiple classes, separate the class names with a space,
+ e.g. <div class="city main">. The element will be styled according to all the classes specified.
+ 
+ 
+e.g.
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>The class Attribute</h2>
+<p>Use CSS to style elements with the class name "city":</p>
+
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+
+</body>
+</html>
+--------------------------------------------------------------------
+# HTML id ?
+
+>The id attribute specifies a unique id for an HTML element.
+ The value of the id attribute must be unique within the HTML document.
+ i.e You cannot have more than one element with the same id in an HTML document.
+
+>The id attribute is used to point to a specific style declaration in a style sheet.
+ It is also used by JavaScript to access and manipulate the element with the specific id.
+
+The syntax for id is: write a hash character (#), followed by an id name.
+ Then, define the CSS properties within curly braces {}.
+ 
+>A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page
+ 
+eg.
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+} 
+</style>
+</head>
+<body>
+
+<h2>The id Attribute</h2>
+<p>Use CSS to style an element with the id "myHeader":</p>
+
+<h1 id="myHeader">My Header</h1>
+
+</body>
+</html>
+
+---------------------------------------------------------------------------
+HTML styles:
+
+Use the style attribute for styling HTML elements
+Use background-color for background color
+Use color for text colors
+Use font-family for text fonts
+Use font-size for text sizes
+Use text-align for text alignment
+
+e.g <tagname style="property:value;">
+e.g<body style="background-color:powderblue;">
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+e.g <h1 style="background-color:powderblue;">This is a heading</h1>
+e.g <p style="color:red;">This is a paragraph.</p>
+e.g <h1 style="font-size:300%;">This is a heading</h1>
+<p style="font-size:160%;">This is a paragraph.</p>
+e.g <h1 style="text-align:center;">Centered Heading</h1>
+<p style="text-align:center;">Centered paragraph.</p>
+
+NOTE :
+
+CSS is most commonaly used for styling and it can be added to HTML documents in 3 ways:
+
+Inline - by using the style attribute inside HTML elements
+Internal - by using a 'style' element in the <head> section.
+External - by using a <link> element to link to an external CSS file
+
+-----------------------------------------------------------------------------------
+HTML Formating elements:
+
+Formatting elements were designed to display special types of text:
+
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text
+<small> - Smaller text
+<del> - Deleted text
+<ins> - Inserted text
+<sub> - Subscript text
+<sup> - Superscript text
+----------------------------------------------------------------
+What are Semantic Elements?
+
+A semantic element clearly describes its meaning to both the browser and the developer.
+
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+
+Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+
+Many web sites contain HTML code like: <div id="nav"> <div class="header"> <div id="footer"> to indicate navigation, header, and footer.
+
+In HTML there are some semantic elements that can be used to define different parts of a web page:  
+
+<article>
+<aside>
+<details>
+<figcaption>
+<figure>
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section>
+<summary>
+<time>
+
+--------------------------------------------------------------------------
+MY HTML practice source code:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my first time webdevelopment step">
+    <meta name="keywords" content="html,CSS,JavaScript">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <!--TO display our website for crawling-->
+    <meta name="author" content="Sandeep Garg">
+    <title>sgpage</title>
+    <!--It will appear as tab name-->
+
+    <!--This how to link CSS external sheet-->
+    <link rel="stylesheet" , href="filename.css">
+
+    <!-- This is how to link external javascript sheet  -->
+    <script src="filename.js"></script>
+
+    <style>
+        .City {
+            background-color: tomato;
+            color: white;
+        }
+
+        .Car {
+            background-color: yellowgreen;
+            color: snow;
+        }
+
+        #Header {
+            background-color: lightblue;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            font-size: xx-large;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>This is my most imp heading 1</h1>
+    <h2>This is second heading</h2>
+    <!--This is how we add paragraph and do twisting-->
+    <p>Lorem ipsum <strong>dolor sit amet</strong> , <em>consectetur</em> adipisicing <i>elit</i> elit. <b>Iste</b>,
+        etc.
+    </p> <!-- Lorem10 is dummy words predfined  -->
+    <hr>
+    <!--HTML Horizontal Rulesa and displayed as a horizontal rule-->
+    <p>This is my next paragraph.<br> This is new line of my same paragraphx</p>
+    <!-- <br> is used to break the line to next line and its a self closed tag -->
+
+    <!--This is how we can add links to the webpage-->
+
+    <a href="https://google.com" target="_blank">Go to google</a><br>
+    <!--we used href attribut within <a> tag with next tap page target-->
+    <a href="https://sim.amazon.com" target="_blank">Go to sim</a> <br>
+
+    <!--This is how we can add image's-->
+    <img src="sanarg BA phonetool.JPG" alt="Error loading" width="1000" height="300"><br>
+    <!--src ='Source of the image' and alt = 'message when Image couldn't load, setting height and width is recommended
+         with CSS not with html -->
+    <!-- <img src="https://source.unsplash.com/random" alt="Error" > <br> -->
+    <!-- <a href="https://google.com" target="_blank"> <img src="sanarg BA phonetool.JPG" alt="Google.com" width="1000" height="300"></a>  -->
+    <!--This is how we can use image as a link -->
+
+    <!--This is how we can add ordered,unordered and description list-->
+    <p>
+    <ul>
+        <li>This is my first unordered list</li>
+        <li>This is my second unordered list</li>
+        <li>This is my third unordered list</li>
+
+    </ul>
+    <ul type='square'>
+        <li>This is my first unordered list</li>
+        <li>This is my second unordered list</li>
+        <li>This is my third unordered list</li>
+    </ul>
+    </p>
+    <p>
+    <ol>
+        <li>This is my first ordered list</li>
+        <li>This is my second ordered list</li>
+        <li>This is my third ordered list</li>
+
+    </ol>
+    <ol type='a'>
+        <li>This is my first ordered list</li>
+        <li>This is my second ordered list</li>
+        <li>This is my third ordered list</li>
+    </ol>
+    </p>
+    <p>
+    <dl>
+        <dt>This is item</dt>
+        <dd>-This is item detialed description</dd>
+    </dl>
+    </p>
+
+    <!--This is how we define table-->
+    <table>
+        <!-- <caption>Employee Info</caption> -->
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>ID</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sandy</td>
+                <td>001</td>
+                <td>DA</td>
+            </tr>
+            <tr>
+                <td>Rajan</td>
+                <td>002</td>
+                <td>DA</td>
+            </tr>
+            <tr>
+                <td>Riya</td>
+                <td>003</td>
+                <td>DA</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <!--This How we can add form in our page-->
+    <form action="backhend.php" target="_blank" method="POST">
+        <label for="name">NAME</label>
+        <div>
+            <input type="text" name="MYNAME" id="name">
+        </div>
+        <br>
+        <div>
+            Email: <input type="email" name="MYEmail">
+        </div>
+        <br>
+        <div>
+            FormDate: <input type="date" name="MYDATE">
+        </div>
+        <br>
+        <div>
+            Marks: <input type="number" name="Marks">
+        </div>
+        <br>
+        <div>
+            Eligible?: <input type="checkbox" name="Eligibility">
+        </div>
+        <br>
+        <div>
+            Gender: Male<input type="Radio" name="Gender">
+            Female<input type="Radio" name="Gender">
+            Other<input type="Radio" name="Gender">
+        </div>
+        <br>
+        <div>
+            Feedback: <br> <textarea name="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <label for="JD">JOB choice</label>
+        <div>
+            <select name="JOB Profile" id="JD">
+                <option value="Data Engg">Data Engg</option>
+                <option value="Business Analyst" selected>Business Analyst</option>
+                <option value="Data scientist">Data scientist</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+        </div>
+        <br>
+        <div>
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+    <br>
+
+    <!--Inline and bloack element-->
+    <p>This is by bloack element</p>
+    <p>This is my also next block element</p>
+    <!--block element-->
+    <span>This is my inline element</span><span>This is my next inline element also</span>
+    <!--inline element-->
+
+    <!--This is how we can define the element class-->
+
+    <br>
+    <div class="Mainclass">This is class block</div>
+    <h3 class="City">This is London</h3>
+    <!--We defined style of this class in head, mostly we do this with css-->
+    <p>London is captial of England</p>
+
+    <!--Multiple class-->
+    <div class="car type model"></div>
+    <!--Here we defined car,type and model class with same element-->
+
+    <h4 class="Car">Swift</h4>
+    <span>I'd like this car in White color</span>
+    <h4 class="Car">verna</h4>
+    <span>I'd like this car in black color</span>
+    <h4 class="Car">Hactor</h4>
+    <span>I'd like this car in Olive-brown color</span>
+    <!--We defined the styple of 'Car' class with defining one time style in head-->
+
+    <!--This is how we can define element id, to access specific element for modification or styling-->
+
+    <h2 id="Header">This is my main header</h2>
+    <br>
+    <!--This is how we can add semantic-->
+    <details>
+        <summary>
+            This is none of your Business.Check details down
+        </summary>
+        Get out!
+    </details>
+    <br>
+     <!--This is how we can add youtube video in our webpage-->
+    <!-- <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
+
+</body>
+
+</html>
+
+--------------------------------------------------------------------------------------------------------
+
+######## HTML TABLE
+
+e.g
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Table Html</title>
+
+    <style>
+        table, th, td {
+          border: 1px solid black; 
+          /*Remember to define borders for both the table and the table cells. */
+          border-collapse: collapse; 
+          /*To let the borders collapse into one border, add the CSS border-collapse property:*/
+        }
+        th, td {
+          padding: 5px;
+          text-align: center;
+        }
+        </style>
+
+</head>
+
+<body>
+    <table style="width:500px;">
+	<caption>Monthly Saving</caption>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Salary</th>
+                <th>Saving</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td>50k</td>
+                <td rowspan="3">10<sup>5</sup></td> <!--To make a cell span more than one row-->
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>50k</td>
+                <!-- <td>10</td> -->
+            </tr>
+            <tr>
+                <td>March</td>
+                <td>50k</td>
+                <!-- <td>10</td> -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">you saved a lot</th>
+            </tr>
+
+        </tfoot>
+    </table>
+
+</body>
+
+</html>
+
+----------------------------------------------------------------------------------------------
+
+##### HTML Form
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+
+<body>
+    <form action="" target="_blank" method="POST" autocomplete="on" style="padding: 2px;margin: 2px;">
+
+        <h3>Personal Details:</h3>
+        <label for="fname">Name:</label><br>
+        <input type="text" name="firstName" id="fname" required><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" name="LastName" id="lname" required><br>
+        <div>
+            <legend>Gender:</legend>
+            <input type="radio" name="Gender" id="male" required>
+            <label for="male">Male</label>
+            <input type="radio" name="Gender" id="female" required>
+            <label for="female">Female</label>
+            <input type="radio" name="Gender" id="other" required>
+            <label for="other">Others</label>
+        </div>
+        <label for="email">Email:</label> <br>
+        <input type="email" name="Email" id="email" required> <br>
+        <label for="address">Address:</label> <br>
+        <textarea name="address" id="address" cols="30" rows="10"> </textarea><br>
+        <label for="city">City</label><br>
+        <input type="text" name="City" id="city" required><br>
+        <label for="state">State</label><br>
+        <input type="text" name="State" id="state" required><br>
+        <label for="zipcode">Pincode:</label><br>
+        <input type="number" name="Pincode" id="zipcode" required><br>
+
+        <h3>Payment Details:</h3>
+        <label for="cardtype">Card Type:</label><br>
+        <select name="cardtype" id="cardtype" required >  <!--To give the drop down list-->
+            <option value="" >--Select Card Type--</option>
+            <option value="Mastercard" >Mastercard</option>
+            <option value="Visa">Visa</option>
+            <option value="Rupay">Rupay</option>
+        </select> <br>
+        <label for="cardnumber">16 digit Card No:</label> <br>
+        <input type="number" name="cardnumber" id="cardnumber" required><br>
+        <label for="cvv">CVV</label><br>
+        <input type="password" name="CVV" id="cvv" required size="4"><br>
+        <label for="expdate">Card Expiry Date:</label><br>
+        <input type="date" name="ExpiryDate" id="expdate"><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+</body>
+
+</html>
